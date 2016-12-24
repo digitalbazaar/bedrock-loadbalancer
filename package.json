@@ -1,0 +1,31 @@
+{
+  "name": "bedrock-loadbalancer",
+  "version": "0.2.0-0",
+  "description": "A Bedrock module that provides a Web traffic load balancer",
+  "main": "./lib",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digitalbazaar/bedrock-loadbalancer.git"
+  },
+  "author": {
+    "name": "Digital Bazaar, Inc.",
+    "email": "support@digitalbazaar.com",
+    "url": "http://digitalbazaar.com"
+  },
+  "bugs": {
+    "url": "https://github.com/digitalbazaar/bedrock-loadbalancer/issues"
+  },
+  "homepage": "https://github.com/digitalbazaar/bedrock-loadbalancer",
+  "dependencies": {
+    "async": "^2.1.4"
+  },
+  "peerDependencies": {
+    "bedrock": "^1.4.0",
+    "bedrock-express": "^2.0.6",
+    "bedrock-letsencrypt": "^0.2.0",
+    "bedrock-server": "^2.2.0"
+  }
+}

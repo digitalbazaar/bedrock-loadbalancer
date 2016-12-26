@@ -28,27 +28,19 @@ config.server.domain = 'lb-1.example.com';
 config.server.host = 'lb-1.example.com';
 config.server.baseUri = 'https://' + config.server.host;
 
-config.loadbalancer.httpRoutes = {
-  'unsecured.example.com': '192.168.0.50'
-}
+config.loadbalancer.domains = {
+  'http://unsecure.example.org/': 'http://192.168.128.64/',
+  'https://secure.example.org/': 'https://192.168.128.65/'
+};
 
-config.loadbalancer.httpsRoutes = {
-  'secured.example.com': '192.168.0.51'
-}
-
-config.letsencrypt.domains = ['secured.example.com'];
-config.letsencrypt.email = 'admin@example.com';
+// set this to 'production' in a full production environment
+config.letsencrypt.mode = 'staging';
+// config.letsencrypt.domains is auto-generated from loadbalancer.domains
+config.letsencrypt.email = 'domains@example.com';
 config.letsencrypt.redisOptions = {
   db: 1,
   password: 'REDIS_PASSWORD'
 };
-
-// setup landing page
-bedrock.events.on('bedrock-express.configure.routes', function(app) {
-  app.get('/', function(req, res) {
-    res.send('Hello Bedrock Loadbalancer!');
-  });
-});
 
 bedrock.start();
 ```

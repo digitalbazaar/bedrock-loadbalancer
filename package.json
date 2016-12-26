@@ -1,6 +1,6 @@
 {
   "name": "bedrock-loadbalancer",
-  "version": "0.2.0-0",
+  "version": "0.2.1",
   "description": "A Bedrock module that provides a Web traffic load balancer",
   "main": "./lib",
   "scripts": {

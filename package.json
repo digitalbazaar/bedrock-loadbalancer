@@ -26,7 +26,7 @@
   "peerDependencies": {
     "bedrock": "^1.4.0",
     "bedrock-express": "^2.0.6",
-    "bedrock-letsencrypt": "^0.2.0-0",
+    "bedrock-letsencrypt": "^0.2.1",
     "bedrock-server": "^2.2.0"
   }
 }

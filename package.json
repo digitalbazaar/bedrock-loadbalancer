@@ -4,7 +4,9 @@
   "description": "A Bedrock module that provides a Web traffic load balancer",
   "main": "./lib",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -21,12 +23,14 @@
   "homepage": "https://github.com/digitalbazaar/bedrock-loadbalancer",
   "dependencies": {
     "async": "^2.1.4",
-    "http-proxy": "^1.16.2"
+    "http-proxy": "^1.16.2",
+    "snyk": "^1.192.3"
   },
   "peerDependencies": {
     "bedrock": "^1.4.0",
     "bedrock-express": "^2.0.6",
     "bedrock-letsencrypt": "^0.2.1",
     "bedrock-server": "^2.2.0"
-  }
+  },
+  "snyk": true
 }
